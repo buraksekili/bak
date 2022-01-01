@@ -14,7 +14,6 @@ func main() {
 	var wg sync.WaitGroup
 
 	go func() {
-		counter := 0
 		wg.Add(1)
 
 		fi, err := os.Stat("test.txt")
@@ -33,7 +32,6 @@ func main() {
 			if fi.ModTime().After(prevTime) && fi.Size() != prevSize {
 				fmt.Println("change detected...")
 				fmt.Printf("new size %v, previously it was %v\n", fi.Size(), prevSize)
-				counter++
 				prevTime = fi.ModTime()
 				prevSize = fi.Size()
 			} else {
