@@ -12,9 +12,8 @@ import (
 
 func main() {
 	var wg sync.WaitGroup
-
+	wg.Add(1)
 	go func() {
-		wg.Add(1)
 
 		fi, err := os.Stat("test.txt")
 		if err != nil {
