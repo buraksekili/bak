@@ -29,7 +29,6 @@ func main() {
 			}
 
 			if fi.ModTime().After(prevTime) && fi.Size() != prevSize {
-				fmt.Println("change detected...")
 				fmt.Printf("new size %v, previously it was %v\n", fi.Size(), prevSize)
 				prevTime = fi.ModTime()
 				prevSize = fi.Size()
