@@ -1,4 +1,4 @@
-package watcher
+package bak
 
 import (
 	"log"
@@ -8,7 +8,7 @@ import (
 
 type Conf struct {
 	// File represents file name that Watcher watches changes on it.
-	File string
+	File     string
 	Duration time.Duration
 }
 
